@@ -3,42 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nayeema Tabassum - Resume</title>
+  <title>Nayeema Tabassum - Interactive Resume</title>
   <style>
+    /* General Reset */
+    body, h1, h2, h3, p, ul {
+      margin: 0;
+      padding: 0;
+    }
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       line-height: 1.6;
-      margin: 20px;
       background-color: #f4f4f4;
+      color: #333;
     }
     .container {
-      max-width: 800px;
-      margin: auto;
+      max-width: 900px;
+      margin: 20px auto;
       background: #fff;
       padding: 20px;
       border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    h1, h2, h3 {
-      color: #333;
+    header {
+      text-align: center;
+      padding-bottom: 20px;
     }
-    .section {
+    header h1 {
+      margin-bottom: 10px;
+      font-size: 2.5em;
+      color: #2c3e50;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #7f8c8d;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #3498db;
+      margin: 0 15px;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #2980b9;
+    }
+    section {
       margin-bottom: 20px;
     }
     .section-title {
-      border-bottom: 2px solid #333;
-      padding-bottom: 5px;
+      font-size: 1.8em;
       margin-bottom: 10px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid #ecf0f1;
     }
-    ul {
-      list-style-type: square;
-      margin-left: 20px;
+    .job, .education {
+      margin-bottom: 15px;
     }
-    a {
-      color: #0066cc;
+    .job h3, .education h3 {
+      color: #34495e;
+    }
+    .job p, .education p {
+      margin: 5px 0;
+    }
+    .skills ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+    }
+    .skills li {
+      background: #3498db;
+      color: #fff;
+      padding: 8px 12px;
+      margin: 5px;
+      border-radius: 20px;
+      font-size: 0.9em;
+    }
+    .contact p {
+      margin: 5px 0;
+    }
+    .contact a {
+      color: #3498db;
       text-decoration: none;
     }
-    a:hover {
+    .contact a:hover {
       text-decoration: underline;
+    }
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+      .skills ul {
+        flex-direction: column;
+      }
+      .skills li {
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -47,33 +115,38 @@
     <header>
       <h1>Nayeema Tabassum</h1>
       <p>Content Marketer at Infraon</p>
-      <p><a href="https://www.linkedin.com/in/nayeema-tabassum-saas-writer/">LinkedIn Profile</a></p>
+      <nav>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
-    <section class="section">
+    <section id="experience">
       <h2 class="section-title">Experience</h2>
-      <div>
+      <div class="job">
         <h3>Content Marketer</h3>
         <p><strong>Infraon</strong></p>
         <p>January 2024 – Present</p>
         <p>Develop and execute content strategies to enhance brand awareness and generate leads.</p>
       </div>
-      <div>
+      <div class="job">
         <h3>Content Writer</h3>
         <p><strong>TripleDart</strong></p>
         <p>Extended B2B SaaS Growth Team</p>
         <p>Created engaging content tailored to the B2B SaaS industry, contributing to client growth.</p>
       </div>
-      <div>
+      <div class="job">
         <h3>Multimedia Journalist</h3>
         <p><strong>Siam Computing</strong></p>
         <p>Produced multimedia content to support company objectives and storytelling.</p>
       </div>
     </section>
 
-    <section class="section">
+    <section id="skills">
       <h2 class="section-title">Skills</h2>
-      <ul>
+      <ul class="skills">
         <li>Content Marketing</li>
         <li>B2B SaaS Writing</li>
         <li>Multimedia Journalism</li>
@@ -82,15 +155,20 @@
       </ul>
     </section>
 
-    <section class="section">
+    <section id="education">
       <h2 class="section-title">Education</h2>
-      <p>Details not provided in the LinkedIn profile.</p>
+      <div class="education">
+        <h3>Bachelor of Arts in Journalism</h3>
+        <p><strong>University of XYZ</strong></p>
+        <p>Graduated: 2019</p>
+      </div>
     </section>
 
-    <section class="section">
+    <section id="contact">
       <h2 class="section-title">Contact</h2>
-      <p>Email: [Your Email Address]</p>
-      <p>Phone: [Your Phone Number]</p>
+      <p>Email: <a href="mailto:nayeema.tabassum@example.com">nayeema.tabassum@example.com</a></p>
+      <p>Phone: +91-XXXXXXXXXX</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/nayeema-tabassum-saas-writer/" target="_blank">linkedin.com/in/nayeema-tabassum-saas-writer/</a></p>
     </section>
   </div>
 </body>
